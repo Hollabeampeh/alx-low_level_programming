@@ -1,24 +1,22 @@
 #include "main.h"
+
 /**
- *  puts_half - print half of a string
- *  @str: input
- *  Return: half the input
+ * print_last_digit - print last digit of a number.
+ *
+ * @n: takes number input
+ *
+ * Return: lastDigit
  */
-void puts_half(char *str)
-{
-int len = 0;
 
-while (*str != '\0')
+int print_last_digit(int n)
 {
-len++;
-str++;
-}
+int lastDigit;
 
-str -= (len / 2);
-while (*str != '\0')
-{
-_putchar(*str);
-str++;
-}
-_putchar('\n');
+	if (n < 0)
+	lastDigit = -1 * (n % 10);
+	else
+	lastDigit = n % 10;
+
+	_putchar(lastDigit + '0');
+	return (lastDigit);
 }
