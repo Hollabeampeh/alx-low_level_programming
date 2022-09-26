@@ -1,22 +1,24 @@
-#include <stdio.h>
-#include "main.h"
+#include"main.h"
 
-/**
- * print_array - print n elements of an array of integers
- * @a: elements of an array
- * @n: number of values
- * Return: 0
+ /**
+ * jack_bauer - prints every minute of the day
+ * Description: jack_bauer
  */
-void print_array(int *a, int n)
-{
-int s;
 
-for (s = 0; s < n; s++)
+void jack_bauer(void)
 {
-printf("%d", a[s]);
-if (s != n - 1)
-printf(", ");
-}
+	int min, hr
 
-printf("\n");
+	for (hr = 0; hr <= 23; ++hr)
+	{
+	for (min = 0; min <= 59; ++min)
+	{
+	_putchar((hr / 10) + 48);
+	_putchar((hr % 10) + 48);
+	_putchar(':');
+	_putchar((min / 10) + 48);
+	_putchar((min % 10) + 48);
+	_putchar('\n');
+	}
+	}
 }
